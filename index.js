@@ -81,7 +81,7 @@ function Car(model, milesPerGallon) {
 };
 
 Car.prototype.fill = function(gallons) {
-  this.tank = gallons;
+  this.tank = this.tank + gallons;
 };
 
 Car.prototype.drive = function(distance) {
@@ -97,9 +97,9 @@ Car.prototype.drive = function(distance) {
         + Should return a string "Playing with x", x being the favorite toy.
 */
 
-function Baby(babyAttributes) {
-  Person.call(this, babyAttributes);
-  this.favoriteToy = babyAttributes.favoriteToy;
+function Baby(name, age, favoriteToy) {
+  Person.call(this, name, age, favoriteToy);
+  this.favoriteToy = favoriteToy;
 };
 
 Baby.prototype = Object.create(Person.prototype);
@@ -123,7 +123,7 @@ Baby.prototype.play = function() {
 
   4. New Binding
     Can use the "new" keyword with constructor functions and pass in the necessary parameters to create a new object with data from the constructor function. "This" keywords then apply to that specific object data
-    
+
 */
 
 
